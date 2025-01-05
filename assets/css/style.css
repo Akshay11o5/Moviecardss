@@ -1,0 +1,212 @@
+:root {
+  --color-pri: #e50914;
+  --color-sec: #ffffff;
+  --color-pri-dark: #c11119;
+  --color-dark-op: #000000aa;
+  --color-dark: #000000;
+  --color-cardbg: #000000e6;
+  --color-dropbg: #00000025;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+body::after {
+  content: "";
+  min-height: 100vh;
+  background-image: linear-gradient(
+      to top,
+      var(--color-dark-op) 0%,
+      var(--color-dark-op) 60%,
+      var(--color-dark) 100%
+    ),
+    url(../img/netfilixbgimg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.logo {
+  width: 100px;
+  display: block;
+  transition: all 0.4s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+button.btn.btn-sm.ntflx-btn-pri {
+  background-color: var(--color-pri);
+  color: var(--color-sec);
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+}
+
+button.btn.btn-sm.ntflx-btn-pri:hover {
+  transform: scale(1.2);
+}
+
+.backDrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-dropbg);
+  transition: all 0.4s ease-in-out;
+  display: none;
+  cursor: pointer;
+}
+
+.backDrop.active {
+  display: block;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.moviemodel {
+  position: fixed;
+  left: 20%;
+  width: 60%;
+  top: 14%;
+  display: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.moviemodel.active {
+  display: block;
+  animation: slideDown 0.4s ease-in-out;
+}
+
+.moviemodel .card-header i {
+  float: right;
+  line-height: 39px;
+  cursor: pointer;
+}
+
+.card-header,
+.card-footer {
+  background-color: gray;
+}
+
+.card_bg {
+  background-color: var(--color-cardbg);
+  color: var(--color-sec);
+}
+
+.card-body {
+  padding: 1rem;
+  border: 2px solid gray;
+}
+
+.movbg {
+  background: transparent;
+  border: 1px solid var(--color-sec);
+  color: var(--color-sec);
+}
+
+.cardbg {
+  background: transparent;
+  background-color: var(--color-dark-op);
+  color: var(--color-sec);
+}
+
+.edit-bg {
+  background-color: var(--color-cardbg);
+  border: 1px solid var(--color-sec);
+  color: var(--color-sec);
+  font-weight: bold;
+}
+
+.close-bg {
+  background-color: var(--color-cardbg);
+  border: 1px solid var(--color-sec);
+  color: var(--color-sec);
+  font-weight: bold;
+}
+
+.croxxToggle:hover {
+  rotate: 90deg;
+  transition: all 0.4s ease-in-out;
+}
+.edit-bg:hover,
+.edit-bg:active,
+.edit-bg:focus,
+.close-bg:hover,
+.close-bg:active,
+.close-bg:focus {
+  color: var(--color-dark);
+  background-color: var(--color-sec);
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.04);
+}
+
+/* movie card css */
+.movieCard {
+  height: 300px;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+}
+.movieCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movieTitle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: var(--color-sec);
+  background-color: var(--color-dark-op);
+  width: 100%;
+  padding: 15px;
+}
+.movieTitle h3 {
+  height: 34px;
+  overflow: hidden;
+}
+
+h4 {
+  font-size: 1rem;
+}
+.rating {
+  position: relative;
+}
+.rating span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1px 5px;
+}
+
+.movieOverview {
+  position: absolute;
+  top: 125%;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-dark-op);
+  height: 65%;
+  padding: 20px;
+  transition: all 0.4s ease-in-out;
+  overflow-y: scroll;
+  border-radius: 10px;
+}
+
+.movieCard:hover .movieOverview {
+  top: 35%;
+  border-radius: 10px;
+  rotate: 360deg;
+  transition: all 0.4s ease-in-out;
+}
