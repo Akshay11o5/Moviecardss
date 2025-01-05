@@ -14,7 +14,7 @@ const sumbitbtn = document.getElementById("sumbitbtn");
 let movieArr = [
   {
     movieTitle: "Everything Everywhere All At Once",
-    imageUrl:
+    movieURL:
       "https://cdn-dkepej.nitrocdn.com/xHPizjaXJNONuYnLnfsGSUCsMnIlzOEq/assets/images/optimized/rev-ef469ea/blog.frame.io/wp-content/uploads/2022/04/B0443-featured-image-1-2048x1152.jpg",
     rating: 4.5,
     overview:
@@ -23,7 +23,7 @@ let movieArr = [
   },
   {
     movieTitle: "The Batman",
-    imageUrl:
+    movieURL:
       "https://m.media-amazon.com/images/I/71YITH5YtwL._AC_UF1000,1000_QL80_.jpg",
     rating: 4,
     overview:
@@ -56,7 +56,7 @@ const createMovieCards = (arr) => {
                                 <div class="card-body cardbg">
                                     <figure class="movieCard">
                                         <img
-                                        src="${movie.imageUrl}"
+                                        src="${movie.movieURL}"
                                         alt="${movie.movieTitle}"
                                         title="${movie.movieTitle}"
                                         />
@@ -112,7 +112,7 @@ const creeateele = (newMovieObj) => {
                                 <div class="card-body cardbg">
                                     <figure class="movieCard">
                                         <img
-                                        src="${newMovieObj.imageUrl}"
+                                        src="${newMovieObj.movieURL}"
                                         alt="${newMovieObj.movieTitle}"
                                         title="${newMovieObj.movieTitle}"
                                         />
